@@ -1,0 +1,40 @@
+﻿<Window
+    x:Class="MySQLConnection.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="{Binding Title}"
+    Width="525"
+    Height="350"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="#FFF6F6F6">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label
+            Grid.Row="0"
+            Margin="0,5"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Simple DataBase Application"
+            FontSize="26"
+            FontWeight="DemiBold"
+            Foreground="Teal" />
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ContentControl Grid.Column="0" prism:RegionManager.RegionName="DataRegion" />
+                <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ButtonRegion" />
+            </Grid>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

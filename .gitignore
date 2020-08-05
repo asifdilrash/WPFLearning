@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/MySQLConnection/.vs/MySQLConnection/v16
+/MySQLConnection/bin/Debug
+/MySQLConnection/obj
